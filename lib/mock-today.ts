@@ -26,7 +26,10 @@ export const mockCourse: Course = {
 };
 
 export function getTodayDoses(course: Course = mockCourse): Dose[] {
-  return [...course.doses].sort((a, b) => a.time.localeCompare(b.time));
+  const rank = (m: string) => course.medications.indexOf(m);
+  return [...course.doses].sort(
+    (a, b) => rank(a.medication) - rank(b.medication) || a.time.localeCompare(b.time),
+  );
 }
 
 export function formatTime(date: Date): string {
