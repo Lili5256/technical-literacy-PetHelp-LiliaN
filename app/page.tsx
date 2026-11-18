@@ -31,6 +31,11 @@ export default function Home() {
           <a href="/api/health">Проверить серверный маршрут</a>
         </Button>
       </div>
+      <div className="mt-4">
+        <Button asChild variant="outline">
+          <a href="/today">Сегодня</a>
+        </Button>
+      </div>
       <p className="mt-8 text-caption text-secondary">
         Для первого запуска база и ключ модели не нужны. PRODUCT.md, CLAUDE.md и
         DECISIONS.md заполняются на занятиях.
